@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-App</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- App box -->
+        <div class="Todo-App">
+            <h2>
+                To-Do List 
+                <!-- Optional icon for branding -->
+                <img src="images/list.png" alt="list icon">
+            </h2>
+            
+            <!-- Input and add button row -->
+            <div class="row">
+                <!-- Textbox for task input -->
+                <input type="text" id="input-box" placeholder="Add your task">
+                <!-- Button to add task, calls JS function -->
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <!-- List where tasks will be added -->
+            <ul id="list-container"></ul>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

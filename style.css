@@ -1,0 +1,159 @@
+/* ========== Global Reset and Font ========== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ========== Page Container ========== */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* ========== Main App Styling ========== */
+.Todo-App {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.Todo-App h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.Todo-App h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* ========== Input + Button Row ========== */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 25px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 14px 30px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e14936;
+}
+
+/* ========== Task List Styles ========== */
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+/* Unchecked icon styling */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Checked task styling */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Checked icon styling */
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+/* Close (delete) button styling */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+/* ========== Mobile Responsive ========== */
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    button {
+        padding: 14px 0;
+    }
+}
